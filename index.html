@@ -770,12 +770,12 @@ Industrial zone.</p>
                     <p class="mb-0">info@doctorfactory.lk</p>
                     <p></p>
                 </div>
-                <div class="col-md-7">
+                <!-- <div class="col-md-7">
                     <form>
                         <h4 class="mb-4">Drop Us A Line</h4>
                         <div class="form-row">
                             <div class="form-group col-sm-4">
-                                <input type="text" class="form-control text-white rounded-0 bg-transparent" name="name" placeholder="Name" data-netlify="true">
+                                <input type="text" class="form-control text-white rounded-0 bg-transparent" name="name" placeholder="Name">
                             </div>
                             <div class="form-group col-sm-4">
                                 <input type="email" class="form-control text-white rounded-0 bg-transparent" name="Email" placeholder="Email">
@@ -793,7 +793,35 @@ Industrial zone.</p>
                         </div>                          
                     </form>
                 </div>
+            </div> -->
+            <div class="col-md-7">
+                <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                    <h4 class="mb-4">Drop Us A Line</h4>
+                    <div class="form-row">
+                        <div class="form-group col-sm-4">
+                            <input type="text" class="form-control text-white rounded-0 bg-transparent" name="name" placeholder="Name" required>
+                        </div>
+                        <div class="form-group col-sm-4">
+                            <input type="email" class="form-control text-white rounded-0 bg-transparent" name="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group col-sm-4">
+                            <input type="text" class="form-control text-white rounded-0 bg-transparent" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group col-12">
+                            <textarea name="message" cols="30" rows="4" class="form-control text-white rounded-0 bg-transparent" placeholder="Message" required></textarea>
+                        </div>
+                        <div class="form-group col-12 mb-0">
+                            <button type="submit" class="btn btn-primary rounded w-md mt-3">Send</button>
+                        </div>
+                        {/* Hidden form fields for Netlify */}
+                        <div class="form-group" style="display: none;">
+                            <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                            <input type="hidden" name="form-name" value="contact" />
+                        </div>
+                    </div>
+                </form>
             </div>
+            
             <!-- Page Footer -->
             <footer class="mt-5 py-4 border-top border-secondary">
                 <p class="mb-0 small">&copy; <script>document.write(new Date().getFullYear())</script>, Crafted with precision by <a href="https://www.sync95.net" target="_blank">Sync95.</a>   Where Innovation Meets Design </p>     
